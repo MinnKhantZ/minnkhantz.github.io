@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Min Khant Zaw | Full-Stack Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.5/css/flag-icon.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
@@ -18,12 +18,12 @@
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#languages">Languages</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -54,25 +54,119 @@
     <div class="container">
       <h2 class="section-title">About Me</h2>
       <div class="about-content">
+        <div class="about-image">
+          <img src="assets/about_me.jpg" alt="Min Khant Zaw" />
+        </div>
         <div class="about-text">
           <h3>Independent builder focused on clear code and scalable systems</h3>
           <p>
-            I deliver end-to-end features across web and mobile: React & React Native on the front, Node.js/Express on the back,
-            and databases like MongoDB/MySQL/PostgreSQL. I work with Docker and Git daily, implement Redis-backed caching,
-            store assets on object storage, and wire AI features into real apps.
+            I’m a full-stack developer who loves turning complex ideas into simple, usable products. My work spans web and mobile, where I combine React, React Native, and Node.js to deliver clean, production-ready applications that actually solve real problems.
           </p>
           <p>
-            Currently pursuing the <strong>AWS Certified Developer</strong> path while targeting remote roles and, post-graduation, an overseas
-            software engineering career.
+            My interest in building things started when I found out how my favorite childhood video games were made. This made me want to build all kinds of software that can help people every day and use new technologies that are changing the world.
+          </p>
+          <p>
+            I’m currently focused on remote opportunities that let me collaborate with ambitious teams, design reliable systems, and keep learning in the ever-evolving world of technology.
           </p>
           <div class="skills">
             <span class="skill">React</span><span class="skill">React Native</span><span class="skill">Redux</span>
             <span class="skill">TypeScript</span><span class="skill">Node.js</span><span class="skill">Express</span>
             <span class="skill">MongoDB</span><span class="skill">MySQL</span><span class="skill">PostgreSQL</span>
-            <span class="skill">Redis</span><span class="skill">Object Storage</span><span class="skill">AI Integrations</span>
+            <span class="skill">Redis</span><span class="skill">Object Storage</span>
             <span class="skill">Docker</span><span class="skill">Git/GitHub</span><span class="skill">Python</span><span class="skill">AI Integration</span><span class="skill">Machine Learning</span><span class="skill">GitHub Actions</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <!-- AI Virtual Try-On Fashion Shop -->
+        <div class="project-card">
+          <div class="project-img" style="background-image: url('assets/fashin_shop.png');"></div>
+          <div class="project-info">
+            <h3 class="project-title">AI Virtual Try-On Fashion Shop (E-commerce)</h3>
+            <p class="project-desc">A full-featured e-commerce platform built with Next.js and PostgreSQL. The standout feature is the integration of AI Image Models to enable users to virtually try on clothes using their personal photos, creating a unique shopping experience.</p>
+            <div class="project-tech">
+              <span class="tech">Next.js</span><span class="tech">Node.js</span><span class="tech">Prisma</span>
+              <span class="tech">PostgreSQL</span><span class="tech">OAuth</span><span class="tech">Gemini API</span>
+            </div>
+            <div class="project-links">
+              <button class="project-link live-btn" onclick="window.open('https://next-ecom-sigma.vercel.app/', '_blank')"><i class="fas fa-external-link-alt"></i> Live</button>
+              <a class="project-link" href="https://github.com/MinnKhantZ/next-ecom" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+        <!-- Pharmacy Management System -->
+        <div class="project-card">
+          <div class="project-img" style="background-image: url('assets/pharmacy_mobile.png');"></div>
+          <div class="project-info">
+            <h3 class="project-title">Pharmacy Management System (Mobile Admin App)</h3>
+            <p class="project-desc">A dedicated mobile application built with React Native for a local pharmacy. Key functionality includes real-time sales and inventory management, income analytics, and a proactive Low Stock Alert Notification system.</p>
+            <div class="project-tech">
+              <span class="tech">React Native</span><span class="tech">Node.js</span><span class="tech">PostgreSQL</span>
+              <span class="tech">Expo Notifications</span>
+            </div>
+            <div class="project-links">
+              <button class="project-link demo-btn" data-video="assets/pharmacy_mobile.mp4"><i class="fas fa-play"></i> Demo</button>
+              <a class="project-link" href="https://github.com/MinnKhantZ/hein-pharmacy-client" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+        <!-- Campus Helper App -->
+        <div class="project-card">
+          <div class="project-img" style="background-image: url('assets/campus_helper.png');"></div>
+          <div class="project-info">
+            <h3 class="project-title">Campus Helper App (Mobile Utility)</h3>
+            <p class="project-desc">A comprehensive campus utility mobile app to centralize information for students and teachers. Features include a dynamic university map with building markers, a dedicated Maker Place for sharing resources, event postings, club information, and timetables.</p>
+            <div class="project-tech">
+              <span class="tech">React Native</span><span class="tech">Node.js</span><span class="tech">PostgreSQL</span>
+            </div>
+            <div class="project-links">
+              <button class="project-link demo-btn" data-video="assets/campus_helper.mp4"><i class="fas fa-play"></i> Demo</button>
+              <a class="project-link" href="https://github.com/MinnKhantZ/campus-helper" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+        <!-- Quiz Taking Platform -->
+        <div class="project-card hidden">
+          <div class="project-img" style="background-image: url('assets/quiz_app.png');"></div>
+          <div class="project-info">
+            <h3 class="project-title">Quiz Taking Platform (Education/Web)</h3>
+            <p class="project-desc">A full-stack web application designed for educational settings. The platform supports two distinct user roles, allowing teachers to post and manage quizzes and students to take, submit, and receive results from the quizzes.</p>
+            <div class="project-tech">
+              <span class="tech">React</span><span class="tech">Node.js</span><span class="tech">MongoDB</span>
+            </div>
+            <div class="project-links">
+              <button class="project-link live-btn" onclick="window.open('https://quiz-app-usnv.onrender.com/', '_blank')"><i class="fas fa-external-link-alt"></i> Live</button>
+              <a class="project-link" href="https://github.com/MinnKhantZ/quiz-app" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+        <!-- AI-Powered Note Taking App -->
+        <div class="project-card hidden">
+          <div class="project-img" style="background-image: url('assets/note_ai.png');"></div>
+          <div class="project-info">
+            <h3 class="project-title">AI-Powered Note Taking App (Productivity/Mobile)</h3>
+            <p class="project-desc">A cross-platform mobile productivity tool for taking and managing notes. The application features AI suggestions for note content and uses secure local storage to ensure user data privacy and quick access.</p>
+            <div class="project-tech">
+              <span class="tech">React Native</span><span class="tech">Gemini API</span>
+            </div>
+            <div class="project-links">
+              <button class="project-link demo-btn" data-video="assets/note_ai.mp4"><i class="fas fa-play"></i> Demo</button>
+              <a class="project-link" href="https://github.com/MinnKhantZ/NoteAI" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="view-more-container">
+        <button class="view-more-btn" id="viewMoreBtn">
+          <i class="fas fa-plus"></i> View More Projects
+        </button>
       </div>
     </div>
   </section>
@@ -198,10 +292,13 @@
       <h2 class="section-title">Education</h2>
       <div class="timeline">
         <div class="timeline-card">
-          <div class="timeline-date">2023 – 2028</div>
-          <h3 class="timeline-title">B.Eng (Information Technology)</h3>
-          <p class="timeline-desc">Technological University Mandalay, Myanmar</p>
-          <p class="timeline-desc">Undergraduate focused on full-stack development, distributed systems, and cloud fundamentals.</p>
+          <img src="assets/TUM.jpg" alt="Technological University Mandalay" class="timeline-image">
+          <div class="timeline-content">
+            <div class="timeline-date">2023 – 2028</div>
+            <h3 class="timeline-title">B.Eng (Information Technology)</h3>
+            <p class="timeline-desc">Technological University Mandalay, Myanmar</p>
+            <p class="timeline-desc">Specializing in full-stack development, distributed systems, and cloud fundamentals.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -270,111 +367,20 @@
       <h2 class="section-title">Languages</h2>
       <div class="lang-container">
         <div class="lang-item">
-          <div class="lang-icon"><span class="flag-icon flag-icon-mm"></span></div>
+          <div class="lang-icon"><span class="fi fi-mm"></span></div>
           <h3 class="lang-name">Burmese</h3>
           <p class="lang-level">Native</p>
         </div>
         <div class="lang-item">
-          <div class="lang-icon"><span class="flag-icon flag-icon-gb"></span></div>
+          <div class="lang-icon"><span class="fi fi-gb"></span></div>
           <h3 class="lang-name">English</h3>
           <p class="lang-level">Professional Working</p>
         </div>
         <div class="lang-item">
-          <div class="lang-icon"><span class="flag-icon flag-icon-cn"></span></div>
+          <div class="lang-icon"><span class="fi fi-cn"></span></div>
           <h3 class="lang-name">Mandarin</h3>
           <p class="lang-level">Basic</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-grid">
-        <!-- AI Virtual Try-On Fashion Shop -->
-        <div class="project-card">
-          <div class="project-img" style="background-image: url('assets/fashin_shop.png');"></div>
-          <div class="project-info">
-            <h3 class="project-title">AI Virtual Try-On Fashion Shop (E-commerce)</h3>
-            <p class="project-desc">A full-featured e-commerce platform built with Next.js and PostgreSQL. The standout feature is the integration of AI Image Models to enable users to virtually try on clothes using their personal photos, creating a unique shopping experience.</p>
-            <div class="project-tech">
-              <span class="tech">Next.js</span><span class="tech">Node.js</span><span class="tech">Prisma</span>
-              <span class="tech">PostgreSQL</span><span class="tech">OAuth</span><span class="tech">Gemini API</span>
-            </div>
-            <div class="project-links">
-              <button class="project-link live-btn" onclick="window.open('https://next-ecom-sigma.vercel.app/', '_blank')"><i class="fas fa-external-link-alt"></i> Live</button>
-              <a class="project-link" href="https://github.com/MinnKhantZ/next-ecom" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
-        <!-- Pharmacy Management System -->
-        <div class="project-card">
-          <div class="project-img" style="background-image: url('assets/pharmacy_mobile.png');"></div>
-          <div class="project-info">
-            <h3 class="project-title">Pharmacy Management System (Mobile Admin App)</h3>
-            <p class="project-desc">A dedicated mobile application built with React Native for a local pharmacy. Key functionality includes real-time sales and inventory management, income analytics, and a proactive Low Stock Alert Notification system.</p>
-            <div class="project-tech">
-              <span class="tech">React Native</span><span class="tech">Node.js</span><span class="tech">PostgreSQL</span>
-              <span class="tech">Expo Notifications</span>
-            </div>
-            <div class="project-links">
-              <button class="project-link demo-btn" data-video="assets/pharmacy_mobile.mp4"><i class="fas fa-play"></i> Demo</button>
-              <a class="project-link" href="https://github.com/MinnKhantZ/hein-pharmacy-client" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
-        <!-- Campus Helper App -->
-        <div class="project-card">
-          <div class="project-img" style="background-image: url('assets/campus_helper.png');"></div>
-          <div class="project-info">
-            <h3 class="project-title">Campus Helper App (Mobile Utility)</h3>
-            <p class="project-desc">A comprehensive campus utility mobile app to centralize information for students and teachers. Features include a dynamic university map with building markers, a dedicated Maker Place for sharing resources, event postings, club information, and timetables.</p>
-            <div class="project-tech">
-              <span class="tech">React Native</span><span class="tech">Node.js</span><span class="tech">PostgreSQL</span>
-            </div>
-            <div class="project-links">
-              <button class="project-link demo-btn" data-video="assets/campus_helper.mp4"><i class="fas fa-play"></i> Demo</button>
-              <a class="project-link" href="https://github.com/MinnKhantZ/campus-helper" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
-        <!-- Quiz Taking Platform -->
-        <div class="project-card hidden">
-          <div class="project-img" style="background-image: url('assets/quiz_app.png');"></div>
-          <div class="project-info">
-            <h3 class="project-title">Quiz Taking Platform (Education/Web)</h3>
-            <p class="project-desc">A full-stack web application designed for educational settings. The platform supports two distinct user roles, allowing teachers to post and manage quizzes and students to take, submit, and receive results from the quizzes.</p>
-            <div class="project-tech">
-              <span class="tech">React</span><span class="tech">Node.js</span><span class="tech">MongoDB</span>
-            </div>
-            <div class="project-links">
-              <button class="project-link live-btn" onclick="window.open('https://quiz-app-usnv.onrender.com/', '_blank')"><i class="fas fa-external-link-alt"></i> Live</button>
-              <a class="project-link" href="https://github.com/MinnKhantZ/quiz-app" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
-        <!-- AI-Powered Note Taking App -->
-        <div class="project-card hidden">
-          <div class="project-img" style="background-image: url('assets/note_ai.png');"></div>
-          <div class="project-info">
-            <h3 class="project-title">AI-Powered Note Taking App (Productivity/Mobile)</h3>
-            <p class="project-desc">A cross-platform mobile productivity tool for taking and managing notes. The application features AI suggestions for note content and uses secure local storage to ensure user data privacy and quick access.</p>
-            <div class="project-tech">
-              <span class="tech">React Native</span><span class="tech">Gemini API</span>
-            </div>
-            <div class="project-links">
-              <button class="project-link demo-btn" data-video="assets/note_ai.mp4"><i class="fas fa-play"></i> Demo</button>
-              <a class="project-link" href="https://github.com/MinnKhantZ/NoteAI" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="view-more-container">
-        <button class="view-more-btn" id="viewMoreBtn">
-          <i class="fas fa-plus"></i> View More Projects
-        </button>
       </div>
     </div>
   </section>
@@ -386,7 +392,7 @@
       <div class="contact-container">
         <div class="contact-info">
           <h3>Let's Connect</h3>
-          <p>I'm actively seeking remote opportunities and collaborations. Feel free to reach out!</p>
+          <p>I’m open to remote software development roles and tech collaborations. Let’s connect and build something great!</p>
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
             <div>
@@ -411,10 +417,10 @@
         </div>
         <div class="contact-form">
           <form id="contactForm">
-            <div class="form-group"><input type="text" class="form-input" placeholder="Your Name" required></div>
-            <div class="form-group"><input type="email" class="form-input" placeholder="Your Email" required></div>
-            <div class="form-group"><input type="text" class="form-input" placeholder="Subject" required></div>
-            <div class="form-group"><textarea class="form-input" placeholder="Your Message" required></textarea></div>
+            <div class="form-group"><input type="text" name="name" class="form-input" placeholder="Your Name" required></div>
+            <div class="form-group"><input type="email" name="email" class="form-input" placeholder="Your Email" required></div>
+            <div class="form-group"><input type="text" name="subject" class="form-input" placeholder="Subject" required></div>
+            <div class="form-group"><textarea name="message" class="form-input" placeholder="Your Message" required></textarea></div>
             <button type="submit" class="btn">Send Message</button>
           </form>
         </div>
@@ -426,10 +432,8 @@
   <footer>
     <div class="container">
       <div class="social-links">
-        <a class="social-link" href="#"><i class="fab fa-github"></i></a>
-        <a class="social-link" href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a class="social-link" href="#"><i class="fab fa-twitter"></i></a>
-        <a class="social-link" href="#"><i class="fab fa-dev"></i></a>
+        <a class="social-link" href="https://github.com/MinnKhantZ" target="_blank"><i class="fab fa-github"></i></a>
+        <a class="social-link" href="https://www.linkedin.com/in/min-khant-zaw-58b69021b" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
       <p class="copyright">© 2025 Min Khant Zaw. All rights reserved.</p>
     </div>
@@ -447,6 +451,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

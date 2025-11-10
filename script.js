@@ -3,6 +3,13 @@ document.querySelector('.menu-btn').addEventListener('click', function() {
   document.querySelector('.nav-links').classList.toggle('active');
 });
 
+// Close mobile menu when a nav link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.remove('active');
+  });
+});
+
 // Header scroll effect
 window.addEventListener('scroll', function() {
   const header = document.querySelector('header');
@@ -115,3 +122,47 @@ viewMoreBtn.addEventListener('click', function() {
     viewMoreBtn.innerHTML = '<i class="fas fa-plus"></i> View More Projects';
   }
 });
+
+// EmailJS functionality
+(function() {
+  // Initialize EmailJS with your public key
+  emailjs.init('_IumjEKcAp9Tf9HYy'); // Replace with your EmailJS public key
+
+  const contactForm = document.getElementById('contactForm');
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Set loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+    // Get form data
+    const formData = new FormData(contactForm);
+    const templateParams = {
+      from_name: formData.get('name'),
+      from_email: formData.get('email'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+      to_name: 'Min Khant Zaw' // Your name
+    };
+
+    // Send email using EmailJS
+    emailjs.send('service_fkilaxl', 'template_9l12jy6', templateParams) // Replace with your service and template IDs
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Message sent successfully!');
+        contactForm.reset();
+        // Reset button state
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Send Message';
+      }, function(error) {
+        console.log('FAILED...', error);
+        alert('Failed to send message. Please try again.');
+        // Reset button state
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Send Message';
+      });
+  });
+})();

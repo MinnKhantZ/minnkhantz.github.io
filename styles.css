@@ -7,6 +7,8 @@ h1,h2,h3,h4,h5{font-family:'Montserrat',sans-serif;font-weight:700}
 section{padding:100px 0}
 .btn{display:inline-block;padding:12px 28px;background:linear-gradient(135deg,var(--primary),var(--secondary));border:none;border-radius:30px;color:#fff;text-decoration:none;font-weight:600;cursor:pointer;transition:.3s;box-shadow:0 4px 15px rgba(110,68,255,.3)}
 .btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(110,68,255,.4)}
+.btn:disabled{cursor:not-allowed;opacity:0.7;transform:none}
+.btn i.fa-spinner{margin-right:8px}
 header{position:fixed;top:0;width:100%;z-index:1000;padding:20px 0;transition:.3s}
 header.scrolled{background-color:rgba(18,18,18,.95);padding:15px 0;box-shadow:0 5px 20px rgba(0,0,0,.1)}
 .nav-container{display:flex;justify-content:space-between;align-items:center}
@@ -27,7 +29,9 @@ header.scrolled{background-color:rgba(18,18,18,.95);padding:15px 0;box-shadow:0 
 #about{background-color:var(--dark-light)}
 .section-title{text-align:center;font-size:36px;margin-bottom:60px;position:relative}
 .section-title:after{content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:80px;height:4px;background:linear-gradient(to right,var(--primary),var(--secondary));border-radius:2px}
-.about-content{display:flex;align-items:center;gap:50px}
+.about-content{display:flex;align-items:center;gap:50px;max-width:1000px;margin:0 auto}
+.about-image{flex-shrink:0}
+.about-image img{width:350px;height:525px;border-radius:15px;object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.2)}
 .about-text{flex:1}
 .about-text h3{font-size:28px;margin-bottom:20px}
 .about-text p{margin-bottom:15px;color:var(--gray)}
@@ -70,7 +74,9 @@ header.scrolled{background-color:rgba(18,18,18,.95);padding:15px 0;box-shadow:0 
 .skill-progress{height:100%;background:linear-gradient(to right,var(--primary),var(--secondary));border-radius:4px;position:relative;width:0;transition:width 1.5s ease}
 #education{background-color:var(--dark-light)}
 .timeline{max-width:900px;margin:0 auto;display:grid;gap:24px}
-.timeline-card{background:var(--dark);border-radius:10px;padding:20px;box-shadow:0 5px 15px rgba(0,0,0,.1)}
+.timeline-card{background:var(--dark);border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.1);display:flex;gap:0;height:140px}
+.timeline-image{width:186px;height:140px;object-fit:cover;border-radius:10px 0 0 10px;flex-shrink:0}
+.timeline-content{flex:1;padding:20px;display:flex;flex-direction:column;justify-content:center}
 .timeline-date{font-size:14px;color:var(--primary);margin-bottom:8px}
 .timeline-title{font-size:20px;margin-bottom:8px}
 .timeline-desc{color:var(--gray);font-size:14px}
@@ -90,7 +96,8 @@ header.scrolled{background-color:rgba(18,18,18,.95);padding:15px 0;box-shadow:0 
 .lang-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
 .lang-item{background-color:var(--dark);padding:25px;border-radius:10px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1);transition:.3s}
 .lang-item:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,.2)}
-.lang-icon{font-size:40px;color:var(--primary);margin-bottom:15px}
+.lang-icon{margin-bottom:15px}
+.fi{width:48px !important;height:36px !important;background-size:contain !important;margin:0 auto;display:block;border-radius:4px}
 .lang-name{font-size:18px;margin-bottom:10px}
 .lang-level{color:var(--gray);font-size:14px}
 #projects{background-color:var(--dark)}
@@ -135,11 +142,19 @@ footer{background-color:#0a0a0a;padding:40px 0;text-align:center}
 .copyright{color:var(--gray);font-size:14px}
 @media (max-width:992px){.about-content,.contact-container{flex-direction:column}}
 @media (max-width:768px){
+  .timeline-card{flex-direction:column;height:auto;gap:0}
+  .timeline-image{width:100%;aspect-ratio:4/3;border-radius:10px 10px 0 0}
+  .timeline-content{padding:15px;text-align:center}
+}
+@media (max-width:1024px){
   .nav-links{position:fixed;top:0;right:-100%;width:250px;height:100vh;background-color:var(--dark-light);flex-direction:column;padding-top:80px;transition:.4s;box-shadow:-5px 0 15px rgba(0,0,0,.1)}
   .nav-links.active{right:0}
   .nav-links li{margin:15px 0;margin-left:30px}
   .menu-btn{display:block;z-index:1001}
-  .hero-title{font-size:40px}
+  .hero-content{margin-top:80px}
+  .hero-title{font-size:28px}
+  .hero-subtitle{font-size:16px}
+  .hero-desc{font-size:16px}
   .hero-btns{flex-direction:column}
   .experience-projects{grid-template-columns:1fr}
 }
