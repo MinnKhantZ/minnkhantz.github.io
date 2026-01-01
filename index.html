@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
 </head>
 <body>
   <!-- Header -->
@@ -39,11 +40,12 @@
         <p class="hero-desc">
           I’m <strong>Min Khant Zaw</strong>, a Myanmar-based developer with
           1+ year building production apps in <strong>React/React Native</strong> and <strong>Node.js</strong>, including
-          <strong>multi-tenant</strong> systems, <strong>Redis</strong> caching, <strong>object storage</strong>, and <strong>AI integrations</strong>.
+          <strong>multi-tenant</strong> systems, <strong>Redis</strong> caching, <strong>Cloud</strong>, and <strong>AI integrations</strong>.
         </p>
         <div class="hero-btns">
           <a href="#projects" class="btn">View Projects</a>
           <a href="#contact" class="btn btn-secondary">Contact</a>
+          <a href="assets/documents/MinKhantZaw_FullStackDeveloper_Resume.pdf" target="_blank" class="btn-gradient-text"><i class="fas fa-file-pdf"></i> Resume</a>
         </div>
       </div>
     </div>
@@ -54,9 +56,6 @@
     <div class="container">
       <h2 class="section-title">About Me</h2>
       <div class="about-content">
-        <div class="about-image">
-          <img src="assets/about_me.jpg" alt="Min Khant Zaw" />
-        </div>
         <div class="about-text">
           <h3>Independent builder focused on clear code and scalable systems</h3>
           <p>
@@ -72,8 +71,8 @@
             <span class="skill">React</span><span class="skill">React Native</span><span class="skill">Redux</span>
             <span class="skill">TypeScript</span><span class="skill">Node.js</span><span class="skill">Express</span>
             <span class="skill">MongoDB</span><span class="skill">MySQL</span><span class="skill">PostgreSQL</span>
-            <span class="skill">Redis</span><span class="skill">Object Storage</span>
-            <span class="skill">Docker</span><span class="skill">Git/GitHub</span><span class="skill">Python</span><span class="skill">AI Integration</span><span class="skill">Machine Learning</span><span class="skill">GitHub Actions</span>
+            <span class="skill">Redis</span><span class="skill">AWS</span>
+            <span class="skill">Docker</span><span class="skill">Git/GitHub</span><span class="skill">GitHub Actions</span><span class="skill">Python</span><span class="skill">AI Integration</span><span class="skill">Machine Learning</span>
           </div>
         </div>
       </div>
@@ -87,7 +86,7 @@
       <div class="projects-grid">
         <!-- AI Virtual Try-On Fashion Shop -->
         <div class="project-card">
-          <div class="project-img" style="background-image: url('assets/fashin_shop.png');"></div>
+          <div class="project-img" style="background-image: url('assets/images/fashin_shop.png');"></div>
           <div class="project-info">
             <h3 class="project-title">AI Virtual Try-On Fashion Shop (E-commerce)</h3>
             <p class="project-desc">A full-featured e-commerce platform built with Next.js and PostgreSQL. The standout feature is the integration of AI Image Models to enable users to virtually try on clothes using their personal photos, creating a unique shopping experience.</p>
@@ -103,23 +102,23 @@
         </div>
         <!-- Pharmacy Management System -->
         <div class="project-card">
-          <div class="project-img" style="background-image: url('assets/pharmacy_mobile.png');"></div>
+          <div class="project-img" style="background-image: url('assets/images/pharmacy_mobile.png');"></div>
           <div class="project-info">
             <h3 class="project-title">Pharmacy Management System (Mobile Admin App)</h3>
             <p class="project-desc">A dedicated mobile application built with React Native for a local pharmacy. Key functionality includes real-time sales and inventory management, income analytics, and a proactive Low Stock Alert Notification system.</p>
             <div class="project-tech">
               <span class="tech">React Native</span><span class="tech">Node.js</span><span class="tech">PostgreSQL</span>
-              <span class="tech">Expo Notifications</span>
+              <span class="tech">Docker</span><span class="tech">AWS EC2</span>
             </div>
             <div class="project-links">
-              <button class="project-link demo-btn" data-video="assets/pharmacy_mobile.mp4"><i class="fas fa-play"></i> Demo</button>
+              <button class="project-link demo-btn" data-video="assets/videos/pharmacy_mobile.mp4"><i class="fas fa-play"></i> Demo</button>
               <a class="project-link" href="https://github.com/MinnKhantZ/hein-pharmacy-client" target="_blank"><i class="fab fa-github"></i> Code</a>
             </div>
           </div>
         </div>
         <!-- Campus Helper App -->
         <div class="project-card">
-          <div class="project-img" style="background-image: url('assets/campus_helper.png');"></div>
+          <div class="project-img" style="background-image: url('assets/images/campus_helper.png');"></div>
           <div class="project-info">
             <h3 class="project-title">Campus Helper App (Mobile Utility)</h3>
             <p class="project-desc">A comprehensive campus utility mobile app to centralize information for students and teachers. Features include a dynamic university map with building markers, a dedicated Maker Place for sharing resources, event postings, club information, and timetables.</p>
@@ -127,14 +126,14 @@
               <span class="tech">React Native</span><span class="tech">Node.js</span><span class="tech">PostgreSQL</span>
             </div>
             <div class="project-links">
-              <button class="project-link demo-btn" data-video="assets/campus_helper.mp4"><i class="fas fa-play"></i> Demo</button>
+              <button class="project-link demo-btn" data-video="assets/videos/campus_helper.mp4"><i class="fas fa-play"></i> Demo</button>
               <a class="project-link" href="https://github.com/MinnKhantZ/campus-helper" target="_blank"><i class="fab fa-github"></i> Code</a>
             </div>
           </div>
         </div>
         <!-- Quiz Taking Platform -->
         <div class="project-card hidden">
-          <div class="project-img" style="background-image: url('assets/quiz_app.png');"></div>
+          <div class="project-img" style="background-image: url('assets/images/quiz_app.png');"></div>
           <div class="project-info">
             <h3 class="project-title">Quiz Taking Platform (Education/Web)</h3>
             <p class="project-desc">A full-stack web application designed for educational settings. The platform supports two distinct user roles, allowing teachers to post and manage quizzes and students to take, submit, and receive results from the quizzes.</p>
@@ -149,7 +148,7 @@
         </div>
         <!-- AI-Powered Note Taking App -->
         <div class="project-card hidden">
-          <div class="project-img" style="background-image: url('assets/note_ai.png');"></div>
+          <div class="project-img" style="background-image: url('assets/images/note_ai.png');"></div>
           <div class="project-info">
             <h3 class="project-title">AI-Powered Note Taking App (Productivity/Mobile)</h3>
             <p class="project-desc">A cross-platform mobile productivity tool for taking and managing notes. The application features AI suggestions for note content and uses secure local storage to ensure user data privacy and quick access.</p>
@@ -157,7 +156,7 @@
               <span class="tech">React Native</span><span class="tech">Gemini API</span>
             </div>
             <div class="project-links">
-              <button class="project-link demo-btn" data-video="assets/note_ai.mp4"><i class="fas fa-play"></i> Demo</button>
+              <button class="project-link demo-btn" data-video="assets/videos/note_ai.mp4"><i class="fas fa-play"></i> Demo</button>
               <a class="project-link" href="https://github.com/MinnKhantZ/NoteAI" target="_blank"><i class="fab fa-github"></i> Code</a>
             </div>
           </div>
@@ -188,7 +187,7 @@
       <div class="experience-projects">
         <!-- Pandora Ecommerce -->
         <div class="experience-project">
-          <div class="project-img" style="background-image: url('assets/pandora_ecommerce.png');">
+          <div class="project-img" style="background-image: url('assets/images/pandora_ecommerce.png');">
             <div class="project-img-overlay">
               <h3 class="project-title">Pandora Ecommerce</h3>
             </div>
@@ -219,7 +218,7 @@
         
         <!-- Easy2Success -->
         <div class="experience-project">
-          <div class="project-img" style="background-image: url('assets/easy2success.png');">
+          <div class="project-img" style="background-image: url('assets/images/easy2success.png');">
             <div class="project-img-overlay">
               <h3 class="project-title">Easy2Success</h3>
             </div>
@@ -240,7 +239,7 @@
             </div>
             <div class="project-tech">
               <span class="tech">React Native</span><span class="tech">Node.js</span><span class="tech">Redis</span>
-              <span class="tech">Cloudflare R2</span><span class="tech">AI Integration</span>
+              <span class="tech">AWS S3</span><span class="tech">AI Integration</span>
             </div>
             <div class="project-links">
               <a class="project-link" href="https://play.google.com/store/apps/details?id=com.pandoratech.easy2success" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
@@ -277,10 +276,9 @@
         </div>
         <div class="skill-category">
           <h3>Cloud DevOps</h3>
-          <div class="skill-item"><div class="skill-info"><span class="skill-name">Docker / Git</span><span class="skill-percentage">85%</span></div><div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div></div>
+          <div class="skill-item"><div class="skill-info"><span class="skill-name">AWS / Docker</span><span class="skill-percentage">80%</span></div><div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div></div>
           <div class="skill-item"><div class="skill-info"><span class="skill-name">GitHub Actions</span><span class="skill-percentage">78%</span></div><div class="skill-bar"><div class="skill-progress" data-width="78%"></div></div></div>
           <div class="skill-item"><div class="skill-info"><span class="skill-name">Redis Caching</span><span class="skill-percentage">82%</span></div><div class="skill-bar"><div class="skill-progress" data-width="82%"></div></div></div>
-          <div class="skill-item"><div class="skill-info"><span class="skill-name">Object Storage</span><span class="skill-percentage">80%</span></div><div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div></div>
         </div>
       </div>
     </div>
@@ -292,7 +290,7 @@
       <h2 class="section-title">Education</h2>
       <div class="timeline">
         <div class="timeline-card">
-          <img src="assets/TUM.jpg" alt="Technological University Mandalay" class="timeline-image">
+          <img src="assets/images/TUM.jpg" alt="Technological University Mandalay" class="timeline-image">
           <div class="timeline-content">
             <div class="timeline-date">2023 – 2028</div>
             <h3 class="timeline-title">B.Eng (Information Technology)</h3>
@@ -310,43 +308,19 @@
       <h2 class="section-title">Certifications</h2>
       <div class="certs-grid">
         <div class="cert-card">
-          <div class="cert-header"><h3 class="cert-title">Responsive Web Design</h3><p class="cert-org">freeCodeCamp</p></div>
+          <div class="cert-header"><h3 class="cert-title">Introduction to Agile Development and Scrum</h3><p class="cert-org">Coursera - IBM</p></div>
           <div class="cert-body">
-            <div class="cert-date">Issued: Dec 2021</div>
-            <p class="cert-desc">Semantic HTML, modern CSS, accessibility, responsive layouts.</p>
-            <a class="cert-link" href="https://freecodecamp.org/certification/minkhankzaw2543/responsive-web-design" target="_blank" rel="noreferrer">View Certificate <i class="fas fa-external-link-alt"></i></a>
+            <div class="cert-date">Issued: Nov 2025</div>
+            <p class="cert-desc">Agile methodologies, Scrum framework, and project management.</p>
+            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/records/TQJVNQGNVSBN" target="_blank" rel="noreferrer">View Certificate <i class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
         <div class="cert-card">
-          <div class="cert-header"><h3 class="cert-title">JavaScript Algorithms and Data Structures</h3><p class="cert-org">freeCodeCamp</p></div>
+          <div class="cert-header"><h3 class="cert-title">Machine Learning Specialization</h3><p class="cert-org">Coursera - DeepLearning.AI</p></div>
           <div class="cert-body">
-            <div class="cert-date">Issued: Aug 2023</div>
-            <p class="cert-desc">ES6+, data structures, algorithms, problem solving.</p>
-            <a class="cert-link" href="https://freecodecamp.org/certification/minkhankzaw2543/javascript-algorithms-and-data-structures" target="_blank" rel="noreferrer">View Certificate <i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-header"><h3 class="cert-title">Front End Development Libraries</h3><p class="cert-org">freeCodeCamp</p></div>
-          <div class="cert-body">
-            <div class="cert-date">Issued: Nov 2023</div>
-            <p class="cert-desc">React, Redux, UI libraries, component patterns.</p>
-            <a class="cert-link" href="https://freecodecamp.org/certification/minkhankzaw2543/front-end-development-libraries" target="_blank" rel="noreferrer">View Certificate <i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-header"><h3 class="cert-title">Back End Development and APIs</h3><p class="cert-org">freeCodeCamp</p></div>
-          <div class="cert-body">
-            <div class="cert-date">Issued: Oct 2024</div>
-            <p class="cert-desc">Node.js, Express, REST APIs, databases, auth.</p>
-            <a class="cert-link" href="https://freecodecamp.org/certification/minkhankzaw2543/back-end-development-and-apis" target="_blank" rel="noreferrer">View Certificate <i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-header"><h3 class="cert-title">Information Security</h3><p class="cert-org">freeCodeCamp</p></div>
-          <div class="cert-body">
-            <div class="cert-date">Issued: Oct 2024</div>
-            <p class="cert-desc">Security best practices for web apps and APIs.</p>
-            <a class="cert-link" href="https://freecodecamp.org/certification/minkhankzaw2543/information-security-v7" target="_blank" rel="noreferrer">View Certificate <i class="fas fa-external-link-alt"></i></a>
+            <div class="cert-date">Issued: Nov 2025</div>
+            <p class="cert-desc">Deep learning fundamentals, neural networks, and AI applications.</p>
+            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/specialization/7GOHV4CKVF0W" target="_blank" rel="noreferrer">View Certificate <i class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
         <div class="cert-card">
@@ -357,6 +331,51 @@
             <a class="cert-link" href="https://coursera.org/share/249c37238223a68e8464e523462b8c42" target="_blank" rel="noreferrer">View Certificate <i class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
+        <div class="cert-card hidden">
+          <div class="cert-header"><h3 class="cert-title">Information Security</h3><p class="cert-org">freeCodeCamp</p></div>
+          <div class="cert-body">
+            <div class="cert-date">Issued: Oct 2024</div>
+            <p class="cert-desc">Security best practices for web apps and APIs.</p>
+            <a class="cert-link" href="https://freecodecamp.org/certification/minkhankzaw2543/information-security-v7" target="_blank" rel="noreferrer">View Certificate <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="cert-card hidden">
+          <div class="cert-header"><h3 class="cert-title">Back End Development and APIs</h3><p class="cert-org">freeCodeCamp</p></div>
+          <div class="cert-body">
+            <div class="cert-date">Issued: Oct 2024</div>
+            <p class="cert-desc">Node.js, Express, REST APIs, databases, auth.</p>
+            <a class="cert-link" href="https://freecodecamp.org/certification/minkhankzaw2543/back-end-development-and-apis" target="_blank" rel="noreferrer">View Certificate <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="cert-card hidden">
+          <div class="cert-header"><h3 class="cert-title">Front End Development Libraries</h3><p class="cert-org">freeCodeCamp</p></div>
+          <div class="cert-body">
+            <div class="cert-date">Issued: Nov 2023</div>
+            <p class="cert-desc">React, Redux, UI libraries, component patterns.</p>
+            <a class="cert-link" href="https://freecodecamp.org/certification/minkhankzaw2543/front-end-development-libraries" target="_blank" rel="noreferrer">View Certificate <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="cert-card hidden">
+          <div class="cert-header"><h3 class="cert-title">JavaScript Algorithms and Data Structures</h3><p class="cert-org">freeCodeCamp</p></div>
+          <div class="cert-body">
+            <div class="cert-date">Issued: Aug 2023</div>
+            <p class="cert-desc">ES6+, data structures, algorithms, problem solving.</p>
+            <a class="cert-link" href="https://freecodecamp.org/certification/minkhankzaw2543/javascript-algorithms-and-data-structures" target="_blank" rel="noreferrer">View Certificate <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="cert-card hidden">
+          <div class="cert-header"><h3 class="cert-title">Responsive Web Design</h3><p class="cert-org">freeCodeCamp</p></div>
+          <div class="cert-body">
+            <div class="cert-date">Issued: Dec 2021</div>
+            <p class="cert-desc">Semantic HTML, modern CSS, accessibility, responsive layouts.</p>
+            <a class="cert-link" href="https://freecodecamp.org/certification/minkhankzaw2543/responsive-web-design" target="_blank" rel="noreferrer">View Certificate <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="view-more-container">
+        <button class="view-more-btn" id="viewMoreCertsBtn">
+          <i class="fas fa-plus"></i> View More Certifications
+        </button>
       </div>
     </div>
   </section>
@@ -435,7 +454,7 @@
         <a class="social-link" href="https://github.com/MinnKhantZ" target="_blank"><i class="fab fa-github"></i></a>
         <a class="social-link" href="https://www.linkedin.com/in/min-khant-zaw-58b69021b" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
-      <p class="copyright">© 2025 Min Khant Zaw. All rights reserved.</p>
+      <p class="copyright">© 2026 Min Khant Zaw. All rights reserved.</p>
     </div>
   </footer>
 

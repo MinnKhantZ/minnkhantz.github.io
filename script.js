@@ -123,6 +123,30 @@ viewMoreBtn.addEventListener('click', function() {
   }
 });
 
+// View More Certifications functionality
+const viewMoreCertsBtn = document.getElementById('viewMoreCertsBtn');
+const hiddenCerts = document.querySelectorAll('.cert-card.hidden');
+let certsVisible = false;
+
+viewMoreCertsBtn.addEventListener('click', function() {
+  certsVisible = !certsVisible;
+  
+  hiddenCerts.forEach(cert => {
+    if (certsVisible) {
+      cert.classList.remove('hidden');
+    } else {
+      cert.classList.add('hidden');
+    }
+  });
+
+  // Update button text and icon
+  if (certsVisible) {
+    viewMoreCertsBtn.innerHTML = '<i class="fas fa-minus"></i> View Less Certifications';
+  } else {
+    viewMoreCertsBtn.innerHTML = '<i class="fas fa-plus"></i> View More Certifications';
+  }
+});
+
 // EmailJS functionality
 (function() {
   // Initialize EmailJS with your public key
