@@ -13,9 +13,9 @@ export default function HomeTab({ setActiveTab }: { setActiveTab: (tab: string) 
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
-            Building apps with <br/>
+            Building AI-powered apps with <br/>
             <span className="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-              AI & cloud-ready backends.
+              scalable cloud backends.
             </span>
           </h1>
 

@@ -1,7 +1,7 @@
 export const DEV_PROFILE = {
   name: "Min Khant Zaw",
   title: "Software Engineer",
-  bio: "I'm a software engineer who loves turning complex ideas into simple, usable products. My work spans web and mobile, where I combine React, React Native, and Node.js to deliver clean, production-ready applications that actually solve real problems.",
+  bio: "I'm a software engineer focused on React, React Native, and Node.js. I build production-ready web and mobile products with practical AI features, clean APIs, and infrastructure that solves real business problems.",
   email: "minkhankzaw2543@gmail.com",
   github: "https://github.com/MinnKhantZ",
   linkedin: "https://www.linkedin.com/in/min-khant-zaw-58b69021b",
@@ -228,35 +228,35 @@ export const PROJECTS = [
 
 export const SKILL_CATEGORIES = [
   {
-    name: "Frontend",
+    name: "Frontend & Mobile",
     skills: [
       { name: "React / Next.js", level: 88 },
-      { name: "React Native", level: 86 },
-      { name: "TypeScript / Redux", level: 82 }
+      { name: "React Native / Expo", level: 90 },
+      { name: "TypeScript / State Management", level: 78 }
     ]
   },
   {
-    name: "Backend",
+    name: "Backend & Systems",
     skills: [
-      { name: "Node.js / Express", level: 90 },
-      { name: "REST APIs / WebSockets", level: 85 },
-      { name: "MongoDB / MySQL / PostgreSQL", level: 84 }
+      { name: "Node.js / Express", level: 92 },
+      { name: "REST APIs / WebSockets", level: 87 },
+      { name: "Auth / Multi-tenant SaaS", level: 88 }
     ]
   },
   {
-    name: "AI / ML",
+    name: "AI Product Engineering",
     skills: [
-      { name: "Python", level: 75 },
-      { name: "Machine Learning", level: 70 },
-      { name: "AI Integration", level: 80 }
+      { name: "OpenAI API Integration", level: 88 },
+      { name: "RAG / LangChain / Vector Search", level: 84 },
+      { name: "AI Automation Features", level: 86 }
     ]
   },
   {
     name: "Cloud & DevOps",
     skills: [
-      { name: "AWS / Docker", level: 80 },
-      { name: "GitHub Actions", level: 78 },
-      { name: "Redis Caching", level: 82 }
+      { name: "Cloudflare Workers / R2 / Pages", level: 88 },
+      { name: "GitHub Actions / CI-CD", level: 84 },
+      { name: "AWS / Docker / Vercel", level: 78 }
     ]
   }
 ];
@@ -279,7 +279,7 @@ export const EXPERIENCE = [
 
 export const EDUCATION = [
   {
-    period: "2023 – 2028",
+    period: "2022 – 2028",
     degree: "B.Eng (Information Technology)",
     institution: "Technological University Mandalay, Myanmar",
     description: "Specializing in full-stack development, distributed systems, and cloud fundamentals."

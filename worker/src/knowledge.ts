@@ -77,7 +77,7 @@ ${certificationsSection}
 }
 
 const profile = {
-  bio: "I'm a software engineer who loves turning complex ideas into simple, usable products. My work spans web and mobile, where I combine React, React Native, and Node.js to deliver clean, production-ready applications that actually solve real problems."
+  bio: "I'm a software engineer focused on React, React Native, and Node.js. I build production-ready web and mobile products with practical AI features, clean APIs, and infrastructure that solves real business problems."
 }
 
 const projectsSection = [
