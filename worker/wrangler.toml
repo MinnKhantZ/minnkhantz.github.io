@@ -3,5 +3,5 @@ main = "src/index.ts"
 compatibility_date = "2025-06-19"
 
 [vars]
-ALLOWED_ORIGINS = "http://localhost:5173,https://minkhantzaw.dev"
+ALLOWED_ORIGINS = "https://minkhantzaw.dev,https://minnkhantz.github.io"
 OPENAI_MODEL = "gpt-5.4-mini"
