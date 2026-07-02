@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, Mail, User, Code, Cpu, Briefcase } from 'lucide-react';
 import { DEV_PROFILE } from './data/portfolio';
 import CanvasParticles from './components/CanvasParticles';
@@ -8,10 +8,30 @@ import SkillsTab from './components/SkillsTab';
 import ExperienceTab from './components/ExperienceTab';
 import ChatBot from './components/ChatBot';
 
+const TABS = ['home', 'projects', 'skills', 'experience'] as const;
+
 export default function App() {
-  const [activeTab, setActiveTab] = useState('home');
+  const [activeTab, setActiveTab] = useState(() => {
+    const hash = window.location.hash.replace('#', '');
+    return TABS.includes(hash as any) ? hash : 'home';
+  });
   const [chatOpen, setChatOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (TABS.includes(hash as any)) {
+        setActiveTab(hash);
+      }
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  useEffect(() => {
+    window.location.hash = activeTab;
+  }, [activeTab]);
 
   return (
     <div className="relative min-h-screen bg-[#030712] text-slate-100 font-sans selection:bg-purple-500 selection:text-white overflow-x-hidden">
