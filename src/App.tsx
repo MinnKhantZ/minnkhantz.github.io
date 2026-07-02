@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Menu, Mail, User, Code, Cpu, Briefcase } from 'lucide-react';
 import { DEV_PROFILE } from './data/portfolio';
 import CanvasParticles from './components/CanvasParticles';
@@ -9,6 +9,12 @@ import ExperienceTab from './components/ExperienceTab';
 import ChatBot from './components/ChatBot';
 
 const TABS = ['home', 'projects', 'skills', 'experience'] as const;
+const TAB_ITEMS = [
+  { id: 'home', label: 'Home', icon: User },
+  { id: 'projects', label: 'Projects', icon: Code },
+  { id: 'skills', label: 'Skills', icon: Cpu },
+  { id: 'experience', label: 'Experience', icon: Briefcase }
+] as const;
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(() => {
@@ -17,6 +23,8 @@ export default function App() {
   });
   const [chatOpen, setChatOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showFloatingTabs, setShowFloatingTabs] = useState(false);
+  const headerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const onHashChange = () => {
@@ -33,6 +41,48 @@ export default function App() {
     window.location.hash = activeTab;
   }, [activeTab]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!headerRef.current) return;
+      setShowFloatingTabs(headerRef.current.getBoundingClientRect().bottom <= 0);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
+  const renderTabNav = (className = '') => (
+    <nav className={`hidden md:flex items-center gap-1.5 bg-slate-900/50 p-1.5 rounded-full border border-slate-800/80 ${className}`.trim()}>
+      {TAB_ITEMS.map(tab => {
+        const Icon = tab.icon;
+        const isActive = activeTab === tab.id;
+        return (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`relative flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+              isActive
+                ? 'text-white'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/30'
+            }`}
+          >
+            {isActive && (
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-indigo-500/30" />
+            )}
+            <Icon className={`w-4 h-4 relative z-10 ${isActive ? 'text-cyan-400' : 'text-slate-500'}`} />
+            <span className="relative z-10">{tab.label}</span>
+          </button>
+        );
+      })}
+    </nav>
+  );
+
   return (
     <div className="relative min-h-screen bg-[#030712] text-slate-100 font-sans selection:bg-purple-500 selection:text-white overflow-x-hidden">
       <CanvasParticles />
@@ -40,7 +90,7 @@ export default function App() {
       <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-indigo-900/10 blur-[120px] pointer-events-none z-0"></div>
       <div className="absolute bottom-[10%] right-[-10%] w-[45vw] h-[45vw] rounded-full bg-purple-900/10 blur-[120px] pointer-events-none z-0"></div>
 
-      <header className="sticky top-0 z-50 bg-[#030712]/75 backdrop-blur-xl border-b border-slate-800/60 transition-all duration-300">
+      <header ref={headerRef} className="relative z-40 bg-[#030712]/75 backdrop-blur-xl border-b border-slate-800/60 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           
           <div className="flex items-center gap-3 group cursor-pointer" onClick={() => setActiveTab('home')}>
@@ -57,34 +107,7 @@ export default function App() {
             </div>
           </div>
 
-          <nav className="hidden md:flex items-center gap-1.5 bg-slate-900/50 p-1.5 rounded-full border border-slate-800/80">
-            {[
-              { id: 'home', label: 'Home', icon: User },
-              { id: 'projects', label: 'Projects', icon: Code },
-              { id: 'skills', label: 'Skills', icon: Cpu },
-              { id: 'experience', label: 'Experience', icon: Briefcase }
-            ].map(tab => {
-              const Icon = tab.icon;
-              const isActive = activeTab === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`relative flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                    isActive 
-                      ? 'text-white' 
-                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/30'
-                  }`}
-                >
-                  {isActive && (
-                    <span className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-indigo-500/30" />
-                  )}
-                  <Icon className={`w-4 h-4 ${isActive ? 'text-cyan-400' : 'text-slate-500'}`} />
-                  {tab.label}
-                </button>
-              );
-            })}
-          </nav>
+          {renderTabNav()}
 
           <div className="hidden md:flex items-center gap-3">
             <a 
@@ -104,6 +127,12 @@ export default function App() {
           </button>
         </div>
       </header>
+
+      <div className={`fixed top-4 left-1/2 z-50 hidden -translate-x-1/2 md:block transition-all duration-300 ${
+        showFloatingTabs ? 'translate-y-0 opacity-100 pointer-events-auto' : '-translate-y-6 opacity-0 pointer-events-none'
+      }`}>
+        {renderTabNav('bg-slate-950/80 backdrop-blur-2xl border-slate-700/70 shadow-[0_18px_50px_rgba(2,6,23,0.55)]')}
+      </div>
 
       {mobileMenuOpen && (
         <div className="fixed inset-0 top-20 z-40 bg-[#030712] p-6 flex flex-col gap-6 md:hidden animate-fade-in-down">
