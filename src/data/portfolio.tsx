@@ -5,7 +5,7 @@ export const DEV_PROFILE = {
   email: "minkhankzaw2543@gmail.com",
   github: "https://github.com/MinnKhantZ",
   linkedin: "https://www.linkedin.com/in/min-khant-zaw-58b69021b",
-  resumeUrl: "/documents/MinKhantZaw_FullStackDeveloper_Resume.pdf",
+  resumeUrl: "/documents/MinKhantZaw_SoftwareEngineer_Resume.pdf",
   stats: [
     { label: "Years Experience", value: "2+" },
     { label: "Projects Delivered", value: "10+" },
